@@ -1,0 +1,230 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+cd {D:/5 st year/ASIC/Lectures/Newfolder}
+# reading modelsim.ini
+do run_sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:48:57 on Dec 18,2025
+# vlog -reportprogress 300 -work work Second_Detector.v 
+# -- Compiling module Second_Detector
+# 
+# Top level modules:
+# 	Second_Detector
+# End time: 09:48:58 on Dec 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:48:58 on Dec 18,2025
+# vlog -reportprogress 300 -work work mod_counter_sw.v 
+# -- Compiling module mod_counter_sw
+# 
+# Top level modules:
+# 	mod_counter_sw
+# End time: 09:48:58 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:48:58 on Dec 18,2025
+# vlog -reportprogress 300 -work work stopwatch.v 
+# -- Compiling module stopwatch
+# 
+# Top level modules:
+# 	stopwatch
+# End time: 09:48:58 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:48:58 on Dec 18,2025
+# vlog -reportprogress 300 -work work tb_stopwatch.sv 
+# -- Compiling module tb_stopwatch
+# 
+# Top level modules:
+# 	tb_stopwatch
+# End time: 09:48:58 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" work.tb_stopwatch 
+# Start time: 09:48:59 on Dec 18,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_stopwatch(fast)
+# Loading work.stopwatch(fast)
+# Loading work.Second_Detector(fast)
+# Loading work.mod_counter_sw(fast)
+# Loading work.mod_counter_sw(fast__1)
+# 
+# [TC_01] Global Reset Check
+#   PASS: Reset state correct (00:00)
+# 
+# [TC_02] Start & Count
+#   PASS: Display 00:02 matches expected Total: 2
+# 
+# [TC_03] Pause & Resume
+#   PASS: Display 00:02 matches expected Total: 2
+#   PASS: Display 00:04 matches expected Total: 4
+# 
+# [TC_07] Clear Functionality (Stop -> Split)
+#   PASS: Display 00:00 matches expected Total: 0
+# 
+# [TC_04 & TC_05] Counting & Rollovers (Fast Forward)
+#   PASS: Display 00:59 matches expected Total: 59
+#   PASS: Display 01:00 matches expected Total: 60
+# 
+# [TC_06] Split Mode (Freeze)
+#   Action: Split Activated at 01:05
+#   PASS: Display 01:05 matches expected Total: 65
+#  --------------Frazee ----------------
+#   PASS: Display 01:05 matches expected Total: 65
+#  --------------Release ----------------
+#   PASS: Display Updated to Live Time (76 seconds)
+# 
+# [TC_08] Full Range Wrap (59:59 -> 00:00)
+#   Waiting for counter to reach 59:59...
+#   INFO: Reached 59:59
+#   PASS: Display 00:00 matches expected Total: 0
+# 
+# ========================================
+#       VERIFICATION COMPLETE             
+# ========================================
+# ** Note: $stop    : tb_stopwatch.sv(209)
+#    Time: 1441730 ns  Iteration: 1  Instance: /tb_stopwatch
+# Break in Module tb_stopwatch at tb_stopwatch.sv line 209
+set PrefMain(saveFile) StopWatch_Transcript
+# StopWatch_Transcript
+quit -sim
+# End time: 09:51:30 on Dec 18,2025, Elapsed time: 0:02:31
+# Errors: 0, Warnings: 1
+cd {D:/5 st year/ASIC/Project}
+# reading modelsim.ini
+do simulate.do
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:51:44 on Dec 18,2025
+# vlog -reportprogress 300 -work work Second_Detector.v 
+# -- Compiling module Second_Detector
+# 
+# Top level modules:
+# 	Second_Detector
+# End time: 09:51:44 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:51:44 on Dec 18,2025
+# vlog -reportprogress 300 -work work mod_counter.v 
+# -- Compiling module mod_counter
+# 
+# Top level modules:
+# 	mod_counter
+# End time: 09:51:44 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:51:44 on Dec 18,2025
+# vlog -reportprogress 300 -work work counter_hours.v 
+# -- Compiling module counter_hours
+# 
+# Top level modules:
+# 	counter_hours
+# End time: 09:51:44 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:51:44 on Dec 18,2025
+# vlog -reportprogress 300 -work work time_keeper.v 
+# -- Compiling module time_keeper
+# 
+# Top level modules:
+# 	time_keeper
+# End time: 09:51:44 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 09:51:44 on Dec 18,2025
+# vlog -reportprogress 300 -work work time_keeper_tb.v 
+# -- Compiling module time_keeper_tb
+# 
+# Top level modules:
+# 	time_keeper_tb
+# End time: 09:51:44 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.time_keeper_tb 
+# Start time: 09:51:44 on Dec 18,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.time_keeper_tb(fast)
+# Loading work.time_keeper(fast)
+# Loading work.Second_Detector(fast)
+# Loading work.mod_counter(fast)
+# Loading work.mod_counter(fast__1)
+# Loading work.mod_counter(fast__2)
+# Loading work.counter_hours(fast)
+# ___________________________________________________
+# ~~~~~~~~~Starting Time_Keeper Verification~~~~~~~~~
+# ___________________________________________________
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 1~~~~~~~~~~~~~~~~~~
+# Time check PASSED. 
+#  Expected time = 0:0:0,
+#  Current time  = 0:0:0
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 2~~~~~~~~~~~~~~~~~~
+# Time check PASSED. 
+#  Expected time = 0:0:1,
+#  Current time  = 0:0:1
+# Time check PASSED. 
+#  Expected time = 0:0:59,
+#  Current time  = 0:0:59
+# Time check PASSED. 
+#  Expected time = 0:1:0,
+#  Current time  = 0:1:0
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 3~~~~~~~~~~~~~~~~~~
+# Time check PASSED. 
+#  Expected time = 0:59:59,
+#  Current time  = 0:59:59
+# Time check PASSED. 
+#  Expected time = 1:0:0,
+#  Current time  = 1:0:0
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 4~~~~~~~~~~~~~~~~~~
+# Time check PASSED. 
+#  Expected time = 23:59:59,
+#  Current time  = 23:59:59
+# Time check PASSED. 
+#  Expected time = 0:0:0,
+#  Current time  = 0:0:0
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 5~~~~~~~~~~~~~~~~~~
+# Time check PASSED. 
+#  Expected time = 12:30:0,
+#  Current time  = 12:30:0
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 6~~~~~~~~~~~~~~~~~~
+# Time check PASSED. 
+#  Expected time = 18:48:0,
+#  Current time  = 18:48:0
+# 
+# ~~~~~~~~~~~~~~~~~~Test Case 7~~~~~~~~~~~~~~~~~~
+# [PASS] Exact timing: 10 cycles per second
+# ---------------------------------------
+# ~~~~~~~~~Verification Complete~~~~~~~~~
+# ---------------------------------------
+# ** Note: $finish    : time_keeper_tb.v(234)
+#    Time: 37110 ns  Iteration: 1  Instance: /time_keeper_tb
+# 1
+# Break in Module time_keeper_tb at time_keeper_tb.v line 234

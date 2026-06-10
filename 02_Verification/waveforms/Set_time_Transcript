@@ -1,0 +1,82 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+project open D:/Fall25/ASIC/Asic/Project/Alarm/Alarm_set
+# Loading project Alarm_set
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:56:25 on Dec 18,2025
+# vlog -reportprogress 300 Alarm_set.v Alarm_set_tb.v 
+# -- Compiling module Alarm_set
+# -- Compiling module Alarm_set_tb
+# 
+# Top level modules:
+# 	Alarm_set_tb
+# End time: 13:56:25 on Dec 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" Alarm_set_tb 
+# Start time: 13:56:25 on Dec 18,2025
+# Loading work.Alarm_set_tb
+# Loading work.Alarm_set
+# Case 1 : Alarm=0000 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 2 : Alarm=0000 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 3 : Alarm=0000 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 4 : Alarm=0000 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 5 : Alarm=2000 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 6 : Alarm=2300 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 7 : Alarm=2350 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 8 : Alarm=2359 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 9 : Alarm=2359 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 10 : Alarm=2359 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 11 : Alarm=2359 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 12 : Alarm=2359 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 13 : Alarm=2350 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 14 : Alarm=2350 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 15 : Alarm=2300 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 16 : Alarm=2300 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 17 : Alarm=2000 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 18 : Alarm=2000 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 19 : Alarm=0000 sound=1 => PASSED
+# -------------------------------------------------------------
+# 
+# Case 20 : Alarm=0000 sound=0 => PASSED
+# -------------------------------------------------------------
+# 
+# ** Note: $stop    : Alarm_set_tb.v(271)
+#    Time: 1655 ns  Iteration: 0  Instance: /Alarm_set_tb
+# Break in Module Alarm_set_tb at Alarm_set_tb.v line 271

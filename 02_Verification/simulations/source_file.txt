@@ -1,0 +1,13 @@
+Alarm_set.v
+AND.v
+counter_hours.v
+mod_counter.v
+mod_counter_sw.v
+PULSE_GEN.v
+Second_Detector.v
+Set_time.v
+stopwatch.v
+Sys_ctrl.v
+SYS_TOP.v
+SYS_TOP_TB.v
+time_keeper.v
