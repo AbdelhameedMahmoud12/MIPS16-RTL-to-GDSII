@@ -112,9 +112,9 @@ The verification scripts are configured for **ModelSim**.
 ## 5. Team & Mentorship Acknowledgements
 
 ### Team Members
-*   **Mark Maher Eweida** (ID: 21P0355) — [21P0355@eng.asu.edu.eg](mailto:21P0355@eng.asu.edu.eg)
-*   **Abdelhameed Mahmoud Sayed** (ID: 21P0171) — [21P0171@eng.asu.edu.eg](mailto:21P0171@eng.asu.edu.eg)
-*   **Abdullah Ahmed Youssef** (ID: 2100369) — [2100369@eng.asu.edu.eg](mailto:2100369@eng.asu.edu.eg)
+* **Abdelhameed Mahmoud Sayed**  — [Linked In](https://www.linkedin.com/in/abdelhameed-mahmoud-25097623b/)
+* **Mark Maher Eweida**  — [E-mail](mailto:21P0355@eng.asu.edu.eg)
+* **Abdullah Ahmed Youssef**  — [Linked In](https://www.linkedin.com/in/abdullah-shaheen-491300266/)
 
 ### Academic Advisor
 **Dr. Diaa El-Din**
