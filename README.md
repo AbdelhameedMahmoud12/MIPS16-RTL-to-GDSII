@@ -125,9 +125,9 @@ The physical design flow translates the RTL description of a MIPS16 processor in
 
 ## 11. Team Members
 
-*   **Abdelhameed Mahmoud Sayed** — *RTL Design, Functional Verification, and Physical P&R Design Lead*
-*   **Mark Maher Eweida** — *Logic Synthesis, Timing Constraining, and Floorplanning Engineer*
-*   **Abdullah Ahmed Youssef** — *FSM Architect and Testbench Development Specialist*
+*   **Abdelhameed Mahmoud Sayed** 
+*   **Mark Maher Eweida**
+*   **Abdullah Ahmed Youssef** 
 
 ---
 
