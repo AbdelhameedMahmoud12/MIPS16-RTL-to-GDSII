@@ -105,8 +105,6 @@ The final results from synthesis and Place-and-Route reports are summarized belo
 * **Mark Maher Eweida**  — [E-mail](mailto:21P0355@eng.asu.edu.eg)
 * **Abdullah Ahmed Youssef**  — [Linked In](https://www.linkedin.com/in/abdullah-shaheen-491300266/)
 
-If you want, I can also make it cleaner with proper “Connect on LinkedIn” text instead of raw URLs.
-
 
 ### Academic Advisor
 **Dr. Diaa El-Din**
