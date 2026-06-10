@@ -1,0 +1,28 @@
+# EDA Tool Logs & Databases
+**/work/
+**/alib-*/
+**/filenames.log
+**/command.log
+*.svf
+*.log
+*.jou
+*.log.*
+*.history
+*.pvs
+*.bak
+*.anno
+*.err
+
+# ModelSim Simulation Outputs
+**/*.wlf
+**/transcript
+**/vsim.wlf
+
+# OS & IDE temporary files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local build plan and helper tools
+git-commit-formmatter/
