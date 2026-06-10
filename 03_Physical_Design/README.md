@@ -1,115 +1,114 @@
 # Physical Design: MIPS16 Processor Flow
 
-This subdirectory contains the logic synthesis and physical design implementation flow of a **16-bit MIPS Processor Core** using Synopsys tools and the Nangate 45nm standard cell library.
+## Goal of this Module
+The goal of the **Physical Design** module is to implement the complete back-end physical implementation (synthesis and Place-and-Route) for a **16-bit MIPS Processor Core**. Starting from behavioral RTL, this block applies standard ASIC flow stages using Synopsys Design Compiler and IC Compiler to synthesize, floorplan, place, route, and sign off a silicon-ready **Nangate 45nm standard cell layout**. The final design meets strict fabrication constraints, achieving zero DRC violations and closing timing at **400 MHz** within a strict area budget.
 
 ---
 
-## 1. Design Constraints
+## 1. Timing & Design Constraints
 
-The timing, area, and environmental constraints were defined in [cons.tcl](file:///d:/5%20th%20year/repo/03_Physical_Design/scripts/cons.tcl):
-*   **Operating Corner:** Worst-case (SS, 0.95V, 125°C).
-*   **Clock Period:** Target of **2.50 ns** (corresponding to **400 MHz**).
-*   **Input/Output Delays:** Configured at 0.2 ns external delay.
-*   **Clock Uncertainty:** Set to 0.1 ns to account for clock skew and jitter.
-*   **Max Transition/Capacitance:** Governed by cell library defaults.
-
----
-
-## 2. Logic Synthesis
-
-Logic synthesis was executed using **Synopsys Design Compiler** ([syn.tcl](file:///d:/5%20th%20year/repo/03_Physical_Design/scripts/syn.tcl)):
-*   **Methodology:** Read RTL, applied constraints, compiled with high area/map effort, and generated structural gate-level netlists.
-*   **Outputs:** Netlist ([mips_16.v](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.v)) and constraint settings ([mips_16.sdc](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.sdc)).
+The timing and physical environments are configured in the Design Constraints file ([cons.tcl](file:///d:/5%20th%20year/repo/03_Physical_Design/scripts/cons.tcl)):
+*   **Operating Corner:** NangateOpenCellLibrary worst-case SS corner ($V_{DD} = 0.95\text{V}$, Temperature = $125^\circ\text{C}$).
+*   **Clock Target:** Clock period of **2.50 ns** (Target Frequency: **400 MHz**).
+*   **Interface Delays:** Input and Output delays capped at a maximum of **0.2 ns** relative to the clock.
+*   **Clock Uncertainty:** Configured to **0.1 ns** to provide guardband for clock tree skew and clock jitter.
+*   **Boundary Conditions:** Boundary hold checks are disabled (`set_false_path -hold`) to prevent the optimizer from inserting unrealistic delay buffers on input/output ports, focusing hold closure entirely on internal sequential paths.
 
 ---
 
-## 3. Floorplanning
+## 2. ASIC Physical Design Implementation Flow
 
-Floorplanning defines the boundary parameters of the chip core and pad placement:
-*   **Total Chip Footprint Area:** **95,308 $\mu m^2$** (satisfies the spec constraint of $\le 100,000 \mu m^2$).
-*   **Core Utilization Target:** 50% non-fixed utilization for initial placement.
-*   **Row Configuration:** Configured standard cell rows matching PDK height rules.
+### 2.1 Logic Synthesis (`syn.tcl` & `cons.tcl`)
+RTL synthesis translates Verilog descriptions into a gate-level structural netlist.
+*   **Tool:** Synopsys Design Compiler.
+*   **Optimization Effort:** Executed via `compile -area_effort high -map_effort high` to map RTL to standard cells. The high effort parameters enable deep technology mapping search trees to minimize design area and optimize slack.
+*   **Sign-Off Outputs:** The structural gate-level netlist ([mips_16.v](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.v)) and Synopsys Design Constraints ([mips_16.sdc](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.sdc)).
 
----
+### 2.2 Design Setup & TLU+ Parasitics (`open_stage.tcl`)
+*   **Database:** A Milkyway design library is created utilizing the technology file `FreePDK45_10m.tf` and standard cell reference libraries.
+*   **Parasitic Modeling:** Loaded TLU+ max (`FreePDK45_10m_Cmax.tlup`) and min (`FreePDK45_10m_Cmin.tlup`) lookup tables with the mapping file `FreePDK45_10m.map` to enable accurate parasitic RC extraction and interconnect delay estimation during Place & Route.
 
-## 4. Power Planning
+### 2.3 Floorplanning
+*   **Core Utilization:** Set to **45%** (0.45) to provide a balance between packing cells tightly (reducing routing wire lengths) and leaving enough whitespace to prevent routing congestion.
+*   **Alternate Row Flipping:** Alternating cell rows are flipped (`-flip_first_row`) to share power and ground rails between adjacent cell rows, saving layout area.
+*   **I/O to Core Boundary Spacing:** Spaced at **12.4 $\mu m$** on all sides to reserve wiring channels for the power distribution rings and routing access.
+*   **Routing Layers:** Restricted routing to a maximum layer of **Metal 6** (`metal6`) to reserve upper thick metals (Metal 7 - Metal 10) for low-resistance power distribution.
 
-Power planning establishes the power distribution network (PDN) supplying power ($V_{DD}$) and ground ($V_{SS}$) to all logic cells:
-*   **Structure:** Standard cell power rails, ring structures around the core, and vertical/horizontal PG straps.
-*   **Snapshots:** Layout of virtual power and ground pads is illustrated below:
+### 2.4 Power Planning & Power Grid Synthesis (PDN)
+*   **Logical Connections:** Connections are derived via `derive_pg_connection` for $V_{DD}$ and $V_{SS}$ nets.
+*   **Power Ring:** Created concentric power rings on `metal7`/`metal9` (horizontal) and `metal8`/`metal10` (vertical) with a width of **5 $\mu m$** and spacing of **0.8 $\mu m$**.
+*   **Power Mesh Straps:** Multi-layer grid straps added vertically and horizontally on layers `metal6` through `metal10` to distribute current evenly.
+*   **Uniform Virtual PG Pads:** To prevent IR-drop hotspots and uneven current entry, virtual power and ground pads were distributed uniformly around the chip boundary (top, bottom, left, right). The PDN was synthesized under a **2% maximum voltage drop** target (budget: 500 mW, supply: 1.1V).
+*   **Well Biasing:** Inserted stagger-pattern Tap Cells (`TAP`) every **30 $\mu m$** along the cell rows to tie N-wells to $V_{DD}$ and P-substrates to $V_{SS}$, preventing latch-up.
 
-![Power Grid Network Layout](file:///d:/5%20th%20year/repo/03_Physical_Design/screenshots/virtual%20PG%20pads.png)
+### 2.5 Cell Placement & Optimization
+*   **Optimization:** Conducted via `place_opt -area_recovery` followed by incremental physical synthesis `psynopt` to legalization cells and recover whitespace area.
+*   **Tie Cells:** Instantiated tie-low (`LOGIC0_X1`) and tie-high (`LOGIC1_X1`) cells to connect constant logic pins (1'b0 and 1'b1), protecting transistor gates from electrostatic discharge (ESD).
 
----
+### 2.6 Clock Tree Synthesis (CTS)
+*   **CTS Driving Cell:** Bounded using a high-drive buffer (`BUF_X16`) at the clock root.
+*   **CTS Constraints:** Skew target set to **0.5 ns**, transition target set to **0.3 ns**, max fanout limited to **10**, and max capacitance limited to **300 fF**.
+*   **Non-Default Routing Rules (NDR):** Configured a custom routing rule (`my_route_rule`) utilizing **double width and double spacing** on layers `metal3`, `metal4`, and `metal5` (`widths {metal3 0.14 metal4 0.28 metal5 0.28} spacings {metal3 0.14 metal4 0.28 metal5 0.28}`) to isolate clock nets from crosstalk noise and decrease clock latency.
+*   **Clock Tree Buffering:** Clock nets were routed using dedicated low-skew clock buffers (`CLKBUF_*`).
 
-## 5. Cell Placement
+### 2.7 Routing & Post-Route ECO Timing Fixes
+*   **Routing Engine:** Performed timing-driven global and detailed routing using Zroute.
+*   **Signal Integrity:** Enabled crosstalk prevention (`-route_xtalk_prevention true`) and delta delay computation to eliminate SI delays.
+*   **Hold Violations Fixing:** Fixed clock hold violations incrementally by inserting small buffers (`BUF_X1`, `BUF_X2`) in short paths.
+*   **Engineering Change Order (ECO) DRC Fix:** Post-routing verification detected a single DRC violation where a signal wire cut through a power rail sheet. 
+    *   *Solution:* The violating wire segment was removed and cleaned using open-net-driven eco routing: `route_zrt_eco -open_net_driven true`.
 
-Placement assigns coordinates to standard cell instances:
-*   **Instance Count:** **72,330 placed cell instances** (70,280 logical + physical padding).
-*   **Optimization:** Logic optimization was conducted under placement congestion checks to ensure routing legality.
-
----
-
-## 6. Clock Tree Synthesis (CTS)
-
-CTS builds the clock tree buffer network to distribute the clock signal synchronously with low skew:
-*   **Clock Trees Built:** Multi-stage buffer tree routed on upper metal layers to minimize RC delays.
-*   **Results:** Verified clock skew and balanced latency across all register endpoints.
-
----
-
-## 7. Routing
-
-Routing executes physical wiring using IC Compiler’s Zroute tool:
-*   **Metal Layers Used:** Routed on Metal 1 through Metal 6 (Nangate 45nm stack).
-*   **Optimizations:** Standard cell filler cells (without metal) were inserted post-route to maintain well continuity.
-*   **Snaps:** Below is the final placed and routed layout plot of the core:
-
-![Design Layout Plot](file:///d:/5%20th%20year/repo/03_Physical_Design/screenshots/chip.png)
-
----
-
-## 8. Timing Closure
-
-Setup and hold timing checks were validated post-route using parasitic extraction (.SPEF annotation):
-*   **Setup Timing (Max Delay):** Fully closed at **400 MHz**.
-    *   **Required Time:** 2.54 ns | **Arrival Time:** 0.74 ns | **Setup Slack (MET):** **1.80 ns** (detailed in [setup.rpt](file:///d:/5%20th%20year/repo/03_Physical_Design/reports/setup.rpt)).
-*   **Hold Timing (Min Delay):** Fully closed.
-    *   **Hold Slack (MET):** **0.00 ns** after automated eco buffer insertion (detailed in [hold.rpt](file:///d:/5%20th%20year/repo/03_Physical_Design/reports/hold.rpt)).
+### 2.8 Design Finishing & Sign-Off
+*   **Filler Cells:** Inserted standard filler cells (`FILLCELL_X32`, `FILLCELL_X16`, etc.) to establish well continuity and meet PDK density rules.
+*   **Redundant Vias:** Inserted redundant vias to increase via reliability and manufacturing yield, achieving a **95.47% redundant via conversion rate** (172,163 out of 180,323 vias).
+*   **Layout Sign-Off:** Exported the final layout stream GDSII ([mips_16.gds](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.gds)), parasitic SPEF files ([mips_16.spef.max](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.spef.max)), and structural Verilog netlists ([mips_16_icc.v](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16_icc.v) with PG rails).
 
 ---
 
-## 9. Design Rule Check (DRC) Verification
+## 3. Floorplan Optimization Trials (Iterative Area Reduction)
 
-Physical sign-off checks verify that the layout complies with silicon foundry design rules:
-*   **DRC Violations:** **0 DRC violations** detected.
-*   **Routing Status:** **0 open nets** and zero shorts (detailed in [DRC.rpt](file:///d:/5%20th%20year/repo/03_Physical_Design/reports/DRC.rpt)).
+To satisfy the area constraint of $\le 100,000 \mu m^2$, multiple design iterations were conducted:
 
----
-
-## 10. Final Results
-
-The physical layout flow successfully output the silicon-ready stream files:
-*   **GDSII File:** [mips_16.gds](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16.gds) (31.5 MB binary layout).
-*   **Structural Netlist:** [mips_16_icc.v](file:///d:/5%20th%20year/repo/03_Physical_Design/layouts/mips_16_icc.v) (netlist containing PG supply lines).
+1.  **Trial 1 (Timing-Focused):** Standard floorplan focused strictly on closing timing. Frequency met (400 MHz), but chip area reached **166,000 $\mu m^2$** (Failed area constraint).
+2.  **Trial 2 (Low Utilization):** Tried constraining utilization to **25%** with a smaller core boundary. Did not converge to a legal layout under the area limit.
+3.  **Trial 3 (Medium Utilization):** Utilization increased to **36%**. Noticeable area reduction achieved, but still exceeded the limit.
+4.  **Trial 4 (Final Core Re-dimensioning):** Set core utilization to **45%** and adjusted the I/O-to-core boundary to 12.4 $\mu m$. This successfully shrank the total chip area to **95,308 $\mu m^2$** while maintaining timing closure.
 
 ---
 
-## 11. Team Members
+## 4. Final Sign-Off Physical Metrics
 
-*   **Abdelhamed Mahmoud** (Physical Design and ASIC Flow Implementation Lead)
+The final results from synthesis and Place-and-Route reports are summarized below:
+
+| Requirement / Spec | Target Constraint | Achieved PNR Metric | Status |
+| :--- | :---: | :---: | :---: |
+| **Chip Footprint Area** | $\le 100,000 \mu m^2$ | **95,308.04 $\mu m^2$** | **PASS** |
+| **Clock Frequency** | $\ge 400 \text{ MHz}$ | **400 MHz** (Clock Period = 2.50 ns) | **PASS** |
+| **Setup Slack (Max Delay)** | Clean ($\ge 0$) | **+1.80 ns** (MET) | **PASS** |
+| **Hold Slack (Min Delay)** | Clean ($\ge 0$) | **+0.00 ns** (MET) | **PASS** |
+| **DRC Violations** | 0 | **0 violations** (Clean routing) | **PASS** |
+| **LVS Net Connectivity** | Clean | **0 open nets, 0 shorts** | **PASS** |
+| **Area-Delay Product** | Minimize | **238.27 $\mu m^2$/MHz** | **PASS** |
+| **Total Wire Length** | - | **363,743 $\mu m$** | - |
+| **Total Vias / Contacts**| - | **180,323** (95.47% redundant via rate) | - |
+
+### Timing Analysis:
+*   **Setup Slack (+1.80 ns):** The large setup margin demonstrates that the MIPS16 core has significant timing headroom and could be clocked at higher frequencies (up to ~600 MHz theoretically).
+*   **Hold Slack (+0.00 ns):** Reflects a zero-margin timing pass. This is typical for highly optimized designs where delay buffers are inserted incrementally to satisfy hold timing without increasing area.
 
 ---
 
-## 12. Advisor
+## 5. Team & Mentorship Acknowledgements
+
+### Team Members
+*   **Mark Maher Eweida** (ID: 21P0355) — [21P0355@eng.asu.edu.eg](mailto:21P0355@eng.asu.edu.eg)
+*   **Abdelhameed Mahmoud Sayed** (ID: 21P0171) — [21P0171@eng.asu.edu.eg](mailto:21P0171@eng.asu.edu.eg)
+*   **Abdullah Ahmed Youssef** (ID: 2100369) — [2100369@eng.asu.edu.eg](mailto:2100369@eng.asu.edu.eg)
 
 ### Academic Advisor
 **Dr. Diaa El-Din**
-
 This work was completed under the supervision and guidance of Dr. Diaa El-Din, whose support and technical feedback were invaluable throughout the project.
 
----
-
-## 13. Acknowledgements
-
-Special thanks to **Eng. Abdelrahman Tamer** (Teaching Assistant) for his guidance, standard cell PDK support, and timing closure reviews during the IC Compiler physical implementation phases.
+### Teaching Assistant
+**Eng. Abdelrahman Tamer**
+Special thanks to Eng. Abdelrahman Tamer for his continuous assistance, technical guidance, and support during the implementation and evaluation phases of the project.
