@@ -125,19 +125,25 @@ The physical design flow translates the RTL description of a MIPS16 processor in
 
 ## 11. Team Members
 
-*   **Abdelhamed Mahmoud** (RTL Design, Verification, and Physical Design Flow Lead)
+*   **Abdelhameed Mahmoud Sayed** — *RTL Design, Functional Verification, and Physical P&R Design Lead*
+*   **Mark Maher Eweida** — *Logic Synthesis, Timing Constraining, and Floorplanning Engineer*
+*   **Abdullah Ahmed Youssef** — *FSM Architect and Testbench Development Specialist*
 
 ---
 
-## 12. Advisor
+## 12. Academic Supervision
 
 ### Academic Advisor
 **Dr. Diaa El-Din**
+*Faculty of Engineering, Ain Shams University*
 
-This work was completed under the supervision and guidance of Dr. Diaa El-Din, whose support and technical feedback were invaluable throughout the project.
+This work was completed under the supervision and guidance of Dr. Diaa El-Din, whose support, technical evaluations, and structural feedback were invaluable throughout the project.
 
 ---
 
 ## 13. Acknowledgements
 
-Special thanks to **Eng. Abdelrahman Tamer** (Teaching Assistant) for his continuous assistance, technical guidance, and support during the implementation and evaluation phases of the project. We also express gratitude to team members, advisors, and reviewers who contributed to the success of this ASIC design project.
+We express our sincere gratitude to:
+*   **Eng. Abdelrahman Tamer** (Teaching Assistant) for his continuous assistance, technical guidance, and support during the logic implementation and layout evaluation phases.
+*   **Ain Shams University Faculty of Engineering** for providing the standard cell libraries and VM environments necessary to execute this ASIC flow.
+*   Our team members, advisors, and peers whose collaborative feedback contributed to the success of this digital design and physical implementation.
