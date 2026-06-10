@@ -1,0 +1,18 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -max_delay
+        -min_delay
+Design : mips_16
+Version: G-2012.06-ICC-SP2
+Date   : Sat Dec 22 12:08:32 2018
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/-40/-40
+This design has no violated constraints.
+
+1

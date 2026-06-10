@@ -1,0 +1,1572 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 50
+Design : mips_16
+Version: G-2012.06-ICC-SP2
+Date   : Sun Dec 23 04:18:32 2018
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary_ss0p95vn40c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/-40/-40
+
+Information: Percent of Arnoldi-based delays =  0.00%
+
+  Startpoint: datamem/ram_reg_217__5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_217__5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  datamem/ram_reg_217__5_/CK (DFF_X1)      0.00       0.20 r
+  datamem/ram_reg_217__5_/Q (DFF_X1)       0.09       0.29 r
+  datamem/U8276/ZN (AOI22_X1)              0.01 &     0.30 f
+  datamem/U8275/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_217__5_/D (DFF_X1)       0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  clock uncertainty                        0.10       0.30
+  datamem/ram_reg_217__5_/CK (DFF_X1)      0.00       0.30 r
+  library hold time                        0.02       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_32__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_32__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  datamem/ram_reg_32__6_/CK (DFF_X1)       0.00       0.19 r
+  datamem/ram_reg_32__6_/Q (DFF_X1)        0.09       0.28 r
+  datamem/U1238/ZN (AOI22_X1)              0.01 &     0.30 f
+  datamem/U1237/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_32__6_/D (DFF_X1)        0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  clock uncertainty                        0.10       0.29
+  datamem/ram_reg_32__6_/CK (DFF_X1)       0.00       0.29 r
+  library hold time                        0.01       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_63__10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_63__10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  datamem/ram_reg_63__10_/CK (DFF_X1)      0.00       0.19 r
+  datamem/ram_reg_63__10_/Q (DFF_X1)       0.09       0.28 r
+  datamem/U5822/ZN (AOI22_X1)              0.01 &     0.30 f
+  datamem/U5821/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_63__10_/D (DFF_X1)       0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  clock uncertainty                        0.10       0.29
+  datamem/ram_reg_63__10_/CK (DFF_X1)      0.00       0.29 r
+  library hold time                        0.01       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_47__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_47__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  datamem/ram_reg_47__8_/CK (DFF_X1)       0.00       0.20 r
+  datamem/ram_reg_47__8_/Q (DFF_X1)        0.09       0.29 r
+  datamem/U5562/ZN (AOI22_X1)              0.02 &     0.30 f
+  datamem/U5561/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_47__8_/D (DFF_X1)        0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  clock uncertainty                        0.10       0.30
+  datamem/ram_reg_47__8_/CK (DFF_X1)       0.00       0.30 r
+  library hold time                        0.01       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_246__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_246__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  datamem/ram_reg_246__6_/CK (DFF_X1)      0.00       0.15 r
+  datamem/ram_reg_246__6_/Q (DFF_X1)       0.09       0.24 r
+  datamem/U4662/ZN (AOI22_X1)              0.02 &     0.25 f
+  datamem/U4661/ZN (INV_X1)                0.01 &     0.26 r
+  datamem/ram_reg_246__6_/D (DFF_X1)       0.00 &     0.26 r
+  data arrival time                                   0.26
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  clock uncertainty                        0.10       0.25
+  datamem/ram_reg_246__6_/CK (DFF_X1)      0.00       0.25 r
+  library hold time                        0.01       0.26
+  data required time                                  0.26
+  -----------------------------------------------------------
+  data required time                                  0.26
+  data arrival time                                  -0.26
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_8__2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_8__2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  datamem/ram_reg_8__2_/CK (DFF_X1)        0.00       0.15 r
+  datamem/ram_reg_8__2_/Q (DFF_X1)         0.09       0.24 r
+  datamem/U846/ZN (AOI22_X1)               0.02 &     0.26 f
+  datamem/U845/ZN (INV_X1)                 0.01 &     0.27 r
+  datamem/ram_reg_8__2_/D (DFF_X1)         0.00 &     0.27 r
+  data arrival time                                   0.27
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  clock uncertainty                        0.10       0.25
+  datamem/ram_reg_8__2_/CK (DFF_X1)        0.00       0.25 r
+  library hold time                        0.02       0.26
+  data required time                                  0.26
+  -----------------------------------------------------------
+  data required time                                  0.26
+  data arrival time                                  -0.27
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_148__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_148__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  datamem/ram_reg_148__8_/CK (DFF_X1)      0.00       0.15 r
+  datamem/ram_reg_148__8_/Q (DFF_X1)       0.09       0.24 r
+  datamem/U3098/ZN (AOI22_X1)              0.02 &     0.25 f
+  datamem/U3097/ZN (INV_X1)                0.01 &     0.26 r
+  datamem/ram_reg_148__8_/D (DFF_X1)       0.00 &     0.26 r
+  data arrival time                                   0.26
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  clock uncertainty                        0.10       0.25
+  datamem/ram_reg_148__8_/CK (DFF_X1)      0.00       0.25 r
+  library hold time                        0.02       0.26
+  data required time                                  0.26
+  -----------------------------------------------------------
+  data required time                                  0.26
+  data arrival time                                  -0.26
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_25__3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_25__3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  datamem/ram_reg_25__3_/CK (DFF_X1)       0.00       0.18 r
+  datamem/ram_reg_25__3_/Q (DFF_X1)        0.09       0.26 r
+  datamem/U5200/ZN (AOI22_X1)              0.02 &     0.28 f
+  datamem/U5199/ZN (INV_X1)                0.01 &     0.29 r
+  datamem/ram_reg_25__3_/D (DFF_X1)        0.00 &     0.29 r
+  data arrival time                                   0.29
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  clock uncertainty                        0.10       0.28
+  datamem/ram_reg_25__3_/CK (DFF_X1)       0.00       0.28 r
+  library hold time                        0.01       0.29
+  data required time                                  0.29
+  -----------------------------------------------------------
+  data required time                                  0.29
+  data arrival time                                  -0.29
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_123__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_123__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_123__8_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_123__8_/Q (DFF_X1)       0.09       0.31 r
+  datamem/U6778/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U6777/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_123__8_/D (DFF_X1)       0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_123__8_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.02       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_8__0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_8__0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  datamem/ram_reg_8__0_/CK (DFF_X1)        0.00       0.18 r
+  datamem/ram_reg_8__0_/Q (DFF_X1)         0.09       0.27 r
+  datamem/U842/ZN (AOI22_X1)               0.01 &     0.29 f
+  datamem/U841/ZN (INV_X1)                 0.01 &     0.30 r
+  datamem/ram_reg_8__0_/D (DFF_X1)         0.00 &     0.30 r
+  data arrival time                                   0.30
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  clock uncertainty                        0.10       0.28
+  datamem/ram_reg_8__0_/CK (DFF_X1)        0.00       0.28 r
+  library hold time                        0.01       0.30
+  data required time                                  0.30
+  -----------------------------------------------------------
+  data required time                                  0.30
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_142__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_142__1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  datamem/ram_reg_142__1_/CK (DFF_X1)      0.00       0.20 r
+  datamem/ram_reg_142__1_/Q (DFF_X1)       0.09       0.29 r
+  datamem/U2988/ZN (AOI22_X1)              0.02 &     0.30 f
+  datamem/U2987/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_142__1_/D (DFF_X1)       0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  clock uncertainty                        0.10       0.30
+  datamem/ram_reg_142__1_/CK (DFF_X1)      0.00       0.30 r
+  library hold time                        0.01       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_127__15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_127__15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.21       0.21
+  datamem/ram_reg_127__15_/CK (DFF_X1)                    0.00       0.21 r
+  datamem/ram_reg_127__15_/Q (DFF_X1)                     0.09       0.30 r
+  datamem/U6856/ZN (AOI22_X1)                             0.02 &     0.31 f
+  datamem/U6855/ZN (INV_X1)                               0.01 &     0.32 r
+  datamem/ram_reg_127__15_/D (DFF_X1)                     0.00 &     0.32 r
+  data arrival time                                                  0.32
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.21       0.21
+  clock uncertainty                                       0.10       0.31
+  datamem/ram_reg_127__15_/CK (DFF_X1)                    0.00       0.31 r
+  library hold time                                       0.01       0.32
+  data required time                                                 0.32
+  --------------------------------------------------------------------------
+  data required time                                                 0.32
+  data arrival time                                                 -0.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_87__9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_87__9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  datamem/ram_reg_87__9_/CK (DFF_X1)       0.00       0.21 r
+  datamem/ram_reg_87__9_/Q (DFF_X1)        0.09       0.30 r
+  datamem/U6204/ZN (AOI22_X1)              0.02 &     0.31 f
+  datamem/U6203/ZN (INV_X1)                0.01 &     0.32 r
+  datamem/ram_reg_87__9_/D (DFF_X1)        0.00 &     0.32 r
+  data arrival time                                   0.32
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  clock uncertainty                        0.10       0.31
+  datamem/ram_reg_87__9_/CK (DFF_X1)       0.00       0.31 r
+  library hold time                        0.01       0.32
+  data required time                                  0.32
+  -----------------------------------------------------------
+  data required time                                  0.32
+  data arrival time                                  -0.32
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_89__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_89__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_89__6_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_89__6_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U6230/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U6229/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_89__6_/D (DFF_X1)        0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_89__6_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_9__11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_9__11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_9__11_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_9__11_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U4960/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U4959/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_9__11_/D (DFF_X1)        0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_9__11_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.01       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_7__3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_7__3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  datamem/ram_reg_7__3_/CK (DFF_X1)        0.00       0.18 r
+  datamem/ram_reg_7__3_/Q (DFF_X1)         0.09       0.27 r
+  datamem/U4912/ZN (AOI22_X1)              0.02 &     0.28 f
+  datamem/U4911/ZN (INV_X1)                0.01 &     0.29 r
+  datamem/ram_reg_7__3_/D (DFF_X1)         0.00 &     0.29 r
+  data arrival time                                   0.29
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  clock uncertainty                        0.10       0.28
+  datamem/ram_reg_7__3_/CK (DFF_X1)        0.00       0.28 r
+  library hold time                        0.01       0.29
+  data required time                                  0.29
+  -----------------------------------------------------------
+  data required time                                  0.29
+  data arrival time                                  -0.29
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_79__5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_79__5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  datamem/ram_reg_79__5_/CK (DFF_X1)       0.00       0.19 r
+  datamem/ram_reg_79__5_/Q (DFF_X1)        0.09       0.28 r
+  datamem/U6068/ZN (AOI22_X1)              0.02 &     0.30 f
+  datamem/U6067/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_79__5_/D (DFF_X1)        0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  clock uncertainty                        0.10       0.29
+  datamem/ram_reg_79__5_/CK (DFF_X1)       0.00       0.29 r
+  library hold time                        0.01       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_27__9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_27__9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  datamem/ram_reg_27__9_/CK (DFF_X1)       0.00       0.15 r
+  datamem/ram_reg_27__9_/Q (DFF_X1)        0.09       0.24 r
+  datamem/U5244/ZN (AOI22_X1)              0.02 &     0.26 f
+  datamem/U5243/ZN (INV_X1)                0.01 &     0.27 r
+  datamem/ram_reg_27__9_/D (DFF_X1)        0.00 &     0.27 r
+  data arrival time                                   0.27
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  clock uncertainty                        0.10       0.25
+  datamem/ram_reg_27__9_/CK (DFF_X1)       0.00       0.25 r
+  library hold time                        0.02       0.27
+  data required time                                  0.27
+  -----------------------------------------------------------
+  data required time                                  0.27
+  data arrival time                                  -0.27
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_238__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_238__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.16       0.16
+  datamem/ram_reg_238__8_/CK (DFF_X1)      0.00       0.16 r
+  datamem/ram_reg_238__8_/Q (DFF_X1)       0.09       0.25 r
+  datamem/U4538/ZN (AOI22_X1)              0.02 &     0.27 f
+  datamem/U4537/ZN (INV_X1)                0.01 &     0.28 r
+  datamem/ram_reg_238__8_/D (DFF_X1)       0.00 &     0.28 r
+  data arrival time                                   0.28
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.16       0.16
+  clock uncertainty                        0.10       0.26
+  datamem/ram_reg_238__8_/CK (DFF_X1)      0.00       0.26 r
+  library hold time                        0.02       0.28
+  data required time                                  0.28
+  -----------------------------------------------------------
+  data required time                                  0.28
+  data arrival time                                  -0.28
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_70__7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_70__7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  datamem/ram_reg_70__7_/CK (DFF_X1)       0.00       0.19 r
+  datamem/ram_reg_70__7_/Q (DFF_X1)        0.09       0.28 r
+  datamem/U1848/ZN (AOI22_X1)              0.02 &     0.30 f
+  datamem/U1847/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_70__7_/D (DFF_X1)        0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  clock uncertainty                        0.10       0.29
+  datamem/ram_reg_70__7_/CK (DFF_X1)       0.00       0.29 r
+  library hold time                        0.01       0.30
+  data required time                                  0.30
+  -----------------------------------------------------------
+  data required time                                  0.30
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_83__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_83__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  datamem/ram_reg_83__6_/CK (DFF_X1)       0.00       0.18 r
+  datamem/ram_reg_83__6_/Q (DFF_X1)        0.09       0.27 r
+  datamem/U6134/ZN (AOI22_X1)              0.02 &     0.29 f
+  datamem/U6133/ZN (INV_X1)                0.01 &     0.30 r
+  datamem/ram_reg_83__6_/D (DFF_X1)        0.00 &     0.30 r
+  data arrival time                                   0.30
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  clock uncertainty                        0.10       0.28
+  datamem/ram_reg_83__6_/CK (DFF_X1)       0.00       0.28 r
+  library hold time                        0.01       0.29
+  data required time                                  0.29
+  -----------------------------------------------------------
+  data required time                                  0.29
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_134__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_134__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  datamem/ram_reg_134__6_/CK (DFF_X1)      0.00       0.15 r
+  datamem/ram_reg_134__6_/Q (DFF_X1)       0.09       0.24 r
+  datamem/U2870/ZN (AOI22_X1)              0.02 &     0.25 f
+  datamem/U2869/ZN (INV_X1)                0.01 &     0.26 r
+  datamem/ram_reg_134__6_/D (DFF_X1)       0.00 &     0.26 r
+  data arrival time                                   0.26
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  clock uncertainty                        0.10       0.25
+  datamem/ram_reg_134__6_/CK (DFF_X1)      0.00       0.25 r
+  library hold time                        0.01       0.26
+  data required time                                  0.26
+  -----------------------------------------------------------
+  data required time                                  0.26
+  data arrival time                                  -0.26
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_111__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_111__1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  datamem/ram_reg_111__1_/CK (DFF_X1)      0.00       0.20 r
+  datamem/ram_reg_111__1_/Q (DFF_X1)       0.09       0.28 r
+  datamem/U6572/ZN (AOI22_X1)              0.02 &     0.30 f
+  datamem/U6571/ZN (INV_X1)                0.01 &     0.31 r
+  datamem/ram_reg_111__1_/D (DFF_X1)       0.00 &     0.31 r
+  data arrival time                                   0.31
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.20       0.20
+  clock uncertainty                        0.10       0.30
+  datamem/ram_reg_111__1_/CK (DFF_X1)      0.00       0.30 r
+  library hold time                        0.01       0.31
+  data required time                                  0.31
+  -----------------------------------------------------------
+  data required time                                  0.31
+  data arrival time                                  -0.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_180__11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_180__11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.19       0.19
+  datamem/ram_reg_180__11_/CK (DFF_X1)                    0.00       0.19 r
+  datamem/ram_reg_180__11_/Q (DFF_X1)                     0.09       0.28 r
+  datamem/U3616/ZN (AOI22_X1)                             0.02 &     0.30 f
+  datamem/U3615/ZN (INV_X1)                               0.01 &     0.31 r
+  datamem/ram_reg_180__11_/D (DFF_X1)                     0.00 &     0.31 r
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.19       0.19
+  clock uncertainty                                       0.10       0.29
+  datamem/ram_reg_180__11_/CK (DFF_X1)                    0.00       0.29 r
+  library hold time                                       0.02       0.30
+  data required time                                                 0.30
+  --------------------------------------------------------------------------
+  data required time                                                 0.30
+  data arrival time                                                 -0.31
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_27__3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_27__3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  datamem/ram_reg_27__3_/CK (DFF_X1)       0.00       0.18 r
+  datamem/ram_reg_27__3_/Q (DFF_X1)        0.09       0.26 r
+  datamem/U5232/ZN (AOI22_X1)              0.02 &     0.28 f
+  datamem/U5231/ZN (INV_X1)                0.01 &     0.29 r
+  datamem/ram_reg_27__3_/D (DFF_X1)        0.00 &     0.29 r
+  data arrival time                                   0.29
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  clock uncertainty                        0.10       0.28
+  datamem/ram_reg_27__3_/CK (DFF_X1)       0.00       0.28 r
+  library hold time                        0.01       0.29
+  data required time                                  0.29
+  -----------------------------------------------------------
+  data required time                                  0.29
+  data arrival time                                  -0.29
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_135__0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_135__0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_135__0_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_135__0_/Q (DFF_X1)       0.09       0.31 r
+  datamem/U6954/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U6953/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_135__0_/D (DFF_X1)       0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_135__0_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_9__13_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_9__13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_9__13_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_9__13_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U4964/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U4963/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_9__13_/D (DFF_X1)        0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_9__13_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.01       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_8__11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_8__11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_8__11_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_8__11_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U864/ZN (AOI22_X1)               0.02 &     0.33 f
+  datamem/U863/ZN (INV_X1)                 0.01 &     0.34 r
+  datamem/ram_reg_8__11_/D (DFF_X1)        0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_8__11_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.01       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_20__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_20__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  datamem/ram_reg_20__6_/CK (DFF_X1)       0.00       0.21 r
+  datamem/ram_reg_20__6_/Q (DFF_X1)        0.09       0.30 r
+  datamem/U1046/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U1045/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_20__6_/D (DFF_X1)        0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  clock uncertainty                        0.10       0.31
+  datamem/ram_reg_20__6_/CK (DFF_X1)       0.00       0.31 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_87__7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_87__7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  datamem/ram_reg_87__7_/CK (DFF_X1)       0.00       0.21 r
+  datamem/ram_reg_87__7_/Q (DFF_X1)        0.09       0.30 r
+  datamem/U6200/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U6199/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_87__7_/D (DFF_X1)        0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  clock uncertainty                        0.10       0.31
+  datamem/ram_reg_87__7_/CK (DFF_X1)       0.00       0.31 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_4__7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_4__7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.17       0.17
+  datamem/ram_reg_4__7_/CK (DFF_X1)        0.00       0.17 r
+  datamem/ram_reg_4__7_/Q (DFF_X1)         0.09       0.26 r
+  datamem/U792/ZN (AOI22_X1)               0.02 &     0.28 f
+  datamem/U791/ZN (INV_X1)                 0.01 &     0.29 r
+  datamem/ram_reg_4__7_/D (DFF_X1)         0.00 &     0.29 r
+  data arrival time                                   0.29
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.17       0.17
+  clock uncertainty                        0.10       0.27
+  datamem/ram_reg_4__7_/CK (DFF_X1)        0.00       0.27 r
+  library hold time                        0.01       0.29
+  data required time                                  0.29
+  -----------------------------------------------------------
+  data required time                                  0.29
+  data arrival time                                  -0.29
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_22__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_22__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_22__8_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_22__8_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U1082/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U1081/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_22__8_/D (DFF_X1)        0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_22__8_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_55__7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_55__7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_55__7_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_55__7_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U5688/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U5687/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_55__7_/D (DFF_X1)        0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_55__7_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_85__6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_85__6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_85__6_/CK (DFF_X1)       0.00       0.22 r
+  datamem/ram_reg_85__6_/Q (DFF_X1)        0.09       0.31 r
+  datamem/U6166/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U6165/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_85__6_/D (DFF_X1)        0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_85__6_/CK (DFF_X1)       0.00       0.32 r
+  library hold time                        0.02       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_8__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_8__1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  datamem/ram_reg_8__1_/CK (DFF_X1)        0.00       0.15 r
+  datamem/ram_reg_8__1_/Q (DFF_X1)         0.09       0.24 r
+  datamem/U844/ZN (AOI22_X1)               0.02 &     0.26 f
+  datamem/U843/ZN (INV_X1)                 0.01 &     0.27 r
+  datamem/ram_reg_8__1_/D (DFF_X1)         0.00 &     0.27 r
+  data arrival time                                   0.27
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.15       0.15
+  clock uncertainty                        0.10       0.25
+  datamem/ram_reg_8__1_/CK (DFF_X1)        0.00       0.25 r
+  library hold time                        0.02       0.26
+  data required time                                  0.26
+  -----------------------------------------------------------
+  data required time                                  0.26
+  data arrival time                                  -0.27
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_11__11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_11__11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_11__11_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_11__11_/Q (DFF_X1)       0.09       0.31 r
+  datamem/U4992/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U4991/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_11__11_/D (DFF_X1)       0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_11__11_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.01       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_244__15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_244__15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  datamem/ram_reg_244__15_/CK (DFF_X1)                    0.00       0.18 r
+  datamem/ram_reg_244__15_/Q (DFF_X1)                     0.09       0.27 r
+  datamem/U4648/ZN (AOI22_X1)                             0.02 &     0.29 f
+  datamem/U4647/ZN (INV_X1)                               0.01 &     0.30 r
+  datamem/ram_reg_244__15_/D (DFF_X1)                     0.00 &     0.30 r
+  data arrival time                                                  0.30
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  clock uncertainty                                       0.10       0.28
+  datamem/ram_reg_244__15_/CK (DFF_X1)                    0.00       0.28 r
+  library hold time                                       0.01       0.29
+  data required time                                                 0.29
+  --------------------------------------------------------------------------
+  data required time                                                 0.29
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_180__14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_180__14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  datamem/ram_reg_180__14_/CK (DFF_X1)                    0.00       0.18 r
+  datamem/ram_reg_180__14_/Q (DFF_X1)                     0.09       0.27 r
+  datamem/U3622/ZN (AOI22_X1)                             0.02 &     0.29 f
+  datamem/U3621/ZN (INV_X1)                               0.01 &     0.30 r
+  datamem/ram_reg_180__14_/D (DFF_X1)                     0.00 &     0.30 r
+  data arrival time                                                  0.30
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  clock uncertainty                                       0.10       0.28
+  datamem/ram_reg_180__14_/CK (DFF_X1)                    0.00       0.28 r
+  library hold time                                       0.01       0.30
+  data required time                                                 0.30
+  --------------------------------------------------------------------------
+  data required time                                                 0.30
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_40__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_40__1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  datamem/ram_reg_40__1_/CK (DFF_X1)       0.00       0.21 r
+  datamem/ram_reg_40__1_/Q (DFF_X1)        0.09       0.30 r
+  datamem/U1356/ZN (AOI22_X1)              0.02 &     0.31 f
+  datamem/U1355/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_40__1_/D (DFF_X1)        0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.21       0.21
+  clock uncertainty                        0.10       0.31
+  datamem/ram_reg_40__1_/CK (DFF_X1)       0.00       0.31 r
+  library hold time                        0.01       0.32
+  data required time                                  0.32
+  -----------------------------------------------------------
+  data required time                                  0.32
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_25__10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_25__10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_25__10_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_25__10_/Q (DFF_X1)       0.09       0.31 r
+  datamem/U5214/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U5213/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_25__10_/D (DFF_X1)       0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_25__10_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.01       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_172__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_172__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_172__8_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_172__8_/Q (DFF_X1)       0.09       0.31 r
+  datamem/U3482/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U3481/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_172__8_/D (DFF_X1)       0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_172__8_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.01       0.34
+  data required time                                  0.34
+  -----------------------------------------------------------
+  data required time                                  0.34
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_83__7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_83__7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  datamem/ram_reg_83__7_/CK (DFF_X1)       0.00       0.19 r
+  datamem/ram_reg_83__7_/Q (DFF_X1)        0.09       0.28 r
+  datamem/U6136/ZN (AOI22_X1)              0.02 &     0.29 f
+  datamem/U6135/ZN (INV_X1)                0.01 &     0.30 r
+  datamem/ram_reg_83__7_/D (DFF_X1)        0.00 &     0.30 r
+  data arrival time                                   0.30
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.19       0.19
+  clock uncertainty                        0.10       0.29
+  datamem/ram_reg_83__7_/CK (DFF_X1)       0.00       0.29 r
+  library hold time                        0.01       0.30
+  data required time                                  0.30
+  -----------------------------------------------------------
+  data required time                                  0.30
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_250__15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_250__15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  datamem/ram_reg_250__15_/CK (DFF_X1)                    0.00       0.18 r
+  datamem/ram_reg_250__15_/Q (DFF_X1)                     0.09       0.27 r
+  datamem/U4744/ZN (AOI22_X1)                             0.02 &     0.29 f
+  datamem/U4743/ZN (INV_X1)                               0.01 &     0.30 r
+  datamem/ram_reg_250__15_/D (DFF_X1)                     0.00 &     0.30 r
+  data arrival time                                                  0.30
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  clock uncertainty                                       0.10       0.28
+  datamem/ram_reg_250__15_/CK (DFF_X1)                    0.00       0.28 r
+  library hold time                                       0.01       0.30
+  data required time                                                 0.30
+  --------------------------------------------------------------------------
+  data required time                                                 0.30
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_246__15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_246__15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  datamem/ram_reg_246__15_/CK (DFF_X1)                    0.00       0.18 r
+  datamem/ram_reg_246__15_/Q (DFF_X1)                     0.09       0.27 r
+  datamem/U4680/ZN (AOI22_X1)                             0.02 &     0.29 f
+  datamem/U4679/ZN (INV_X1)                               0.01 &     0.30 r
+  datamem/ram_reg_246__15_/D (DFF_X1)                     0.00 &     0.30 r
+  data arrival time                                                  0.30
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  clock uncertainty                                       0.10       0.28
+  datamem/ram_reg_246__15_/CK (DFF_X1)                    0.00       0.28 r
+  library hold time                                       0.01       0.30
+  data required time                                                 0.30
+  --------------------------------------------------------------------------
+  data required time                                                 0.30
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_150__13_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_150__13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.20       0.20
+  datamem/ram_reg_150__13_/CK (DFF_X1)                    0.00       0.20 r
+  datamem/ram_reg_150__13_/Q (DFF_X1)                     0.09       0.29 r
+  datamem/U3140/ZN (AOI22_X1)                             0.02 &     0.30 f
+  datamem/U3139/ZN (INV_X1)                               0.01 &     0.31 r
+  datamem/ram_reg_150__13_/D (DFF_X1)                     0.00 &     0.31 r
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.20       0.20
+  clock uncertainty                                       0.10       0.30
+  datamem/ram_reg_150__13_/CK (DFF_X1)                    0.00       0.30 r
+  library hold time                                       0.01       0.31
+  data required time                                                 0.31
+  --------------------------------------------------------------------------
+  data required time                                                 0.31
+  data arrival time                                                 -0.31
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_180__10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_180__10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  datamem/ram_reg_180__10_/CK (DFF_X1)                    0.00       0.18 r
+  datamem/ram_reg_180__10_/Q (DFF_X1)                     0.09       0.28 r
+  datamem/U3614/ZN (AOI22_X1)                             0.02 &     0.29 f
+  datamem/U3613/ZN (INV_X1)                               0.01 &     0.30 r
+  datamem/ram_reg_180__10_/D (DFF_X1)                     0.00 &     0.30 r
+  data arrival time                                                  0.30
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  clock uncertainty                                       0.10       0.28
+  datamem/ram_reg_180__10_/CK (DFF_X1)                    0.00       0.28 r
+  library hold time                                       0.01       0.30
+  data required time                                                 0.30
+  --------------------------------------------------------------------------
+  data required time                                                 0.30
+  data arrival time                                                 -0.30
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: datamem/ram_reg_56__10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_56__10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_56__10_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_56__10_/Q (DFF_X1)       0.09       0.31 r
+  datamem/U1630/ZN (AOI22_X1)              0.02 &     0.33 f
+  datamem/U1629/ZN (INV_X1)                0.01 &     0.34 r
+  datamem/ram_reg_56__10_/D (DFF_X1)       0.00 &     0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_56__10_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_97__2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_97__2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.17       0.17
+  datamem/ram_reg_97__2_/CK (DFF_X1)       0.00       0.17 r
+  datamem/ram_reg_97__2_/Q (DFF_X1)        0.09       0.26 r
+  datamem/U6350/ZN (AOI22_X1)              0.02 &     0.28 f
+  datamem/U6349/ZN (INV_X1)                0.01 &     0.29 r
+  datamem/ram_reg_97__2_/D (DFF_X1)        0.00 &     0.29 r
+  data arrival time                                   0.29
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.17       0.17
+  clock uncertainty                        0.10       0.27
+  datamem/ram_reg_97__2_/CK (DFF_X1)       0.00       0.27 r
+  library hold time                        0.02       0.28
+  data required time                                  0.28
+  -----------------------------------------------------------
+  data required time                                  0.28
+  data arrival time                                  -0.29
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_40__11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_40__11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  datamem/ram_reg_40__11_/CK (DFF_X1)      0.00       0.22 r
+  datamem/ram_reg_40__11_/Q (DFF_X1)       0.09       0.30 r
+  datamem/U1376/ZN (AOI22_X1)              0.02 &     0.32 f
+  datamem/U1375/ZN (INV_X1)                0.01 &     0.33 r
+  datamem/ram_reg_40__11_/D (DFF_X1)       0.00 &     0.33 r
+  data arrival time                                   0.33
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.22       0.22
+  clock uncertainty                        0.10       0.32
+  datamem/ram_reg_40__11_/CK (DFF_X1)      0.00       0.32 r
+  library hold time                        0.01       0.33
+  data required time                                  0.33
+  -----------------------------------------------------------
+  data required time                                  0.33
+  data arrival time                                  -0.33
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: datamem/ram_reg_4__2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: datamem/ram_reg_4__2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  datamem/ram_reg_4__2_/CK (DFF_X1)        0.00       0.18 r
+  datamem/ram_reg_4__2_/Q (DFF_X1)         0.09       0.27 r
+  datamem/U782/ZN (AOI22_X1)               0.02 &     0.29 f
+  datamem/U781/ZN (INV_X1)                 0.01 &     0.30 r
+  datamem/ram_reg_4__2_/D (DFF_X1)         0.00 &     0.30 r
+  data arrival time                                   0.30
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.18       0.18
+  clock uncertainty                        0.10       0.28
+  datamem/ram_reg_4__2_/CK (DFF_X1)        0.00       0.28 r
+  library hold time                        0.01       0.29
+  data required time                                  0.29
+  -----------------------------------------------------------
+  data required time                                  0.29
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
